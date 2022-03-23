@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Mis pasatiempos</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    </head>
+    <body style="background-color:rgb(227, 207, 243);">
+        <h1 id="app" style="text-align: center; color: rgb(214, 101, 139)">
+            {{ message }}
+        </h1>
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div id="app-2"text-align: center class="row">
+                        <ul>
+                            <li v-for="msg in bucl">
+                              {{ msg.message }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div id="app-3">
+                        <input v-model="pasatiempo">
+                    </div>
+    
+                </div>
+            </div>
+            <div class="row">
+                <div id="app-4">
+                    <button type="button" class="btn btn-dark" v-on:click="showImage = !showImage">Click esconder imagen</button>
+                    <hr>
+                    <img v-if="!showImage" style="width:200px;height:150px;display: block;margin: 0 auto;" v-bind:src="imag">
+                </div>
+                
+            </div>
+            <hr>
+            <div class="row">
+                <div id="app-5">
+                    <h6>Nombre del autor: {{name}}</h6>
+                    <h6>Matricula del autor: {{matricula}}</h6>
+                    <h6>Titulo de la act: {{titulo}}</h6>
+                </div>
+            </div>
+        
+            
+        </div>
+
+
+    <script src="basic.js"></script>
+    </body>
+</html>
